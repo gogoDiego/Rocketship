@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 
 import DownArrow from "./imagelogos/down.png"
@@ -23,8 +23,7 @@ export default function OverviewDash (props){
     const [chartTime, setChartTime] = useState("D");
 
 
-
-    async function fetchAssetPriceData(coingeckoAPILink) {
+    const fetchAssetPriceData = useCallback(async (coingeckoAPILink) => {
         const apiUrl = coingeckoAPILink;
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -32,23 +31,17 @@ export default function OverviewDash (props){
           time: new Date(price[0]).toISOString().slice(0, 10),
           value: price[1],
         }));
-        return prices.slice(0, -1); 
-      }
+        return prices.slice(0, -1);
+      }, []);
+    
       
-      async function main() {
+      const main = useCallback(async () => {
         const assetPriceData = await fetchAssetPriceData(props.props.chain.apiPriceLink);
         return assetPriceData;
-      }
-      
-    //   useEffect(() => {
-    //     async function fetchData() {
-    //       const data = await main();
-    //       setChartData(data);
-    //     }
-    //     fetchData();
-    //   }, [props.props.chain, main]);
+      }, [fetchAssetPriceData]);
 
-    useEffect(() => {
+
+      useEffect(() => {
         async function fetchData() {
           const data = await main();
           setChartData(data);
