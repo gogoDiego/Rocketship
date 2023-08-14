@@ -1,17 +1,8 @@
-import React, { useEffect, useState } from "react";
-
-
-
-import DownArrowIcon from "./imagelogos/down.png"
+import React from "react";
 
 
 
 export default function AssetDashboard (props){
-
-
-console.log(props)
-
-
 
 
 

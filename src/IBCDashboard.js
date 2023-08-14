@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 
 import "./IBCDashboard.css"
@@ -8,10 +8,6 @@ import SwitchIcon from "./imagelogos/arrow-goes-left-right-icon.svg"
 import SettingsGearIcon from "./imagelogos/setting-icon.svg"
 
 export default function OverviewDash (props,setExpanded){
-
-
-console.log(props)
-
 
 
 
@@ -36,7 +32,7 @@ console.log(props)
 
             <div className="IBCSubtitle">
                 <p className="IBCSub"> Bridge Assets </p> 
-                <img src={SettingsGearIcon} className="IBCSetting"/>
+                <img src={SettingsGearIcon} alt="Gear Icon Settings" className="IBCSetting"/>
             </div>
 
                 <div className="IBCFromDiv">
@@ -44,14 +40,14 @@ console.log(props)
                     <div className="IBCChainSelector">
 
                         <div className="IBCChainFromDiv fromchain">
-                            <img src={DownArrowIcon} className="IBCdownarrowicon"/>
+                            <img src={DownArrowIcon} alt="Down Icon" className="IBCdownarrowicon"/>
                             <p className="selectChain"> Select Chain</p>
                         </div>
                         <div className="IBCSwitchChains">
-                            <img src={SwitchIcon} className="SwitchChainIcon"/>
+                            <img src={SwitchIcon} alt="swip Icon" className="SwitchChainIcon"/>
                         </div>
                         <div className="IBCChainFromDiv destinationchain">
-                            <img src={DownArrowIcon} className="IBCdownarrowicon"/>
+                            <img src={DownArrowIcon} alt="down icon" className="IBCdownarrowicon"/>
                             <p className="selectChain"> Select Chain</p>
                         </div>
 
@@ -60,8 +56,8 @@ console.log(props)
                     <div className="IBCAssetAmountFromDiv">
 
                         <div className="IBCAssetDiv">
-                            <img src={DownArrowIcon} className="IBCdownarrowicon"/>
-                            {/* <img src={props.props.chain.logo} className="IBCAsseticon"/> */}
+                            <img src={DownArrowIcon}  alt="downicon" className="IBCdownarrowicon"/>
+                            {/* <img src={props.props.chain.logo} alt="downicon" className="IBCAsseticon"/> */}
                             <p className="selectChain"> Select Token</p>
                         </div>
                         <div className="IBCAmountDiv">

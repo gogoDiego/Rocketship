@@ -46,7 +46,7 @@ export default function OverviewDash (props){
           setChartData(data);
         }
         fetchData();
-      }, [props.props.chain]);
+      }, [props.props.chain, main]);
       
 
 
@@ -91,16 +91,16 @@ export default function OverviewDash (props){
 
                 <div className="overviewprojectResources">
                     <div>
-                        <img src={WebsiteIcon} className="resourcesIcon" onClick={()=> openResource("website")} />
+                        <img src={WebsiteIcon} alt="website icon" className="resourcesIcon" onClick={()=> openResource("website")} />
                     </div>
                     <div>
-                        <img src={TwitterIcon} className="resourcesIcon" onClick={()=> openResource("twitter")} />
+                        <img src={TwitterIcon} alt="twitter icon" className="resourcesIcon" onClick={()=> openResource("twitter")} />
                     </div>
                     <div>
-                        <img src={TelegramIcon} className="resourcesIcon" onClick={()=> openResource("telegram")} />
+                        <img src={TelegramIcon} alt="telegram icon" className="resourcesIcon" onClick={()=> openResource("telegram")} />
                     </div>
                     <div>
-                        <img src={GithubIcon} className="resourcesIcon" onClick={()=> openResource("github")}   />
+                        <img src={GithubIcon} alt="github icon" className="resourcesIcon" onClick={()=> openResource("github")}   />
                     </div>
                 </div>
             
@@ -111,7 +111,7 @@ export default function OverviewDash (props){
                 
                 <div className="readmoreDiv1">
                     <p className="readmore"> {props.expanded ? "Less": "More"} Info </p>
-                    <img src={DownArrow} className={`downArrowIcon ${props.expanded ? "flipped" : ""}`}
+                    <img src={DownArrow} alt="down arrow icon" className={`downArrowIcon ${props.expanded ? "flipped" : ""}`}
                     />
                 </div>
 

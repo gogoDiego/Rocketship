@@ -12,12 +12,6 @@ import "./appDisplayStyle.css"
 
 
 
-
-
-
-
-
-
 export default function DisplayApps (props){
 
 
@@ -31,7 +25,7 @@ export default function DisplayApps (props){
 
                 <div className='app'>
                     <div className='appsquare'>
-                        <img src={props.chain.logo} className="appLogo"/>
+                        <img src={props.chain.logo} alt='chain App Logo' className="appLogo"/>
                     </div>
                     <p className='appTitle'> Osmosis</p>
                 </div>
@@ -42,7 +36,7 @@ export default function DisplayApps (props){
 
                 <div className='app'>
                     <div className='appsquare'>
-                        <img src={props.chain.logo} className="appLogo"/>
+                        <img src={props.chain.logo} alt='chain App Logo' className="appLogo"/>
                     </div>
                     <p className='appTitle'> Osmosis</p>
                 </div>

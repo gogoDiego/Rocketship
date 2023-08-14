@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { createChart, CrosshairMode, PriceScaleMode } from "lightweight-charts";
+import { createChart, PriceScaleMode } from "lightweight-charts";
 
 const TradingViewChart = React.memo(({ data, className }) => {
   const chartContainerRef = useRef(null);

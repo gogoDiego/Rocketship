@@ -10,10 +10,6 @@ import "./article.css"
 
 
 
-
-
-
-
 export default function DisplayArticles (props){
 
 
@@ -22,13 +18,13 @@ export default function DisplayArticles (props){
     <div className='article'>
 
         <div className="articleImgDiv">
-            <img src={props.chain.coverPhoto} className='articleImage' alt='coverphoto'/>
+            <img src={props.chain.coverPhoto} alt="Article photo" className='articleImage' alt='coverphoto'/>
         </div>
 
         <div className='articleContents'>
 
                 <div className='articleTypefaceLogo'>
-                    <img src={props.chain.logoTypeface} />
+                    <img src={props.chain.logoTypeface} alt='articleTypeface' />
                 </div>
 
                 <p className='articleDescription'> {props.chain.articleDescription} </p>
@@ -41,7 +37,7 @@ export default function DisplayArticles (props){
                         <p> Explore </p>
                     </button>
 
-                    <img src={PlusIcon} className="PlusIcon"/>
+                    <img src={PlusIcon} alt='plus icon' className="PlusIcon"/>
                     
                 </div>
 

@@ -14,11 +14,6 @@ import './filterbar.css';
 
 
 
-
-
-
-
-
 const pagesnav = "< 1/1 >"
 
 
@@ -39,6 +34,7 @@ export default function FilterBar (){
                     <div className='displaytype rowicondiv'>
                         <img
                             src={rowIcon}
+                            alt='display row icon'
                             className="rowicon displaytypeicon"
                         />
                     </div>
@@ -47,12 +43,14 @@ export default function FilterBar (){
                     <div className='displaytype appicondiv'>
                         <img
                             src={appIcon}
+                            alt='display app icon'
                             className="appicon displaytypeicon"
                         />
                     </div>
                     <div className='displaytype articleicondiv'>
                         <img
                             src={articleIcon}
+                            alt='display Articles icon'
                             className="articleicon displaytypeicon"
                         />
                     </div>

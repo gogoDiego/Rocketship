@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import YoutubeEmbed from "./EmbedYoutube";
-import TwitterEmbed from "./twitterEmbed";
-import MediumEmbed from "./mediumArticleEmbed";
+// import TwitterEmbed from "./twitterEmbed";
+// import MediumEmbed from "./mediumArticleEmbed";
 import DownArrow from "./imagelogos/down.png"
 
 import WebsiteIcon from "./imagelogos/icons8-website-50.png"
@@ -14,16 +14,12 @@ import GithubIcon from "./imagelogos/icons8-github.svg"
 export default function InfoDashboard (props){
 
 
-
-
     const openResource = (resourceType) => {
         window.open(props.props.chain[resourceType], "_blank");
       };
 
 
-
-
-    const [article,setArticle] = useState("Introduction")
+    const [article] = useState("Introduction")
 
 
 
@@ -63,16 +59,16 @@ export default function InfoDashboard (props){
 
                 <div className="infoprojectResources">
                 <div>
-                    <img src={WebsiteIcon} className="resourcesIcon" onClick={()=> openResource("website")} />
+                    <img src={WebsiteIcon} alt="website Icon" className="resourcesIcon" onClick={()=> openResource("website")} />
                 </div>
                 <div>
-                    <img src={TwitterIcon} className="resourcesIcon" onClick={()=> openResource("twitter")} />
+                    <img src={TwitterIcon} alt="twitter Icon" className="resourcesIcon" onClick={()=> openResource("twitter")} />
                 </div>
                 <div>
-                    <img src={TelegramIcon} className="resourcesIcon" onClick={()=> openResource("telegram")} />
+                    <img src={TelegramIcon} alt="telegram Icon" className="resourcesIcon" onClick={()=> openResource("telegram")} />
                 </div>
                 <div>
-                    <img src={GithubIcon} className="resourcesIcon" onClick={()=> openResource("github")}   />
+                    <img src={GithubIcon} alt="github Icon" className="resourcesIcon" onClick={()=> openResource("github")}   />
                 </div>
                 {/* <div>
                     <img src={WebsiteIcon} className="resourcesIcon" onClick={()=> openResource("website")} />
@@ -87,7 +83,7 @@ export default function InfoDashboard (props){
                     <img src={GithubIcon} className="resourcesIcon" onClick={()=> openResource("github")}   />
                 </div> */}
                 <div>
-                    <img src={DownArrow} className="resourcesIcon flop" />
+                    <img src={DownArrow} alt="downarrow icon" className="resourcesIcon flop" />
                 </div>
             </div>
 
@@ -128,7 +124,7 @@ export default function InfoDashboard (props){
                 </div>
 
                 <div className="verticalSelctionsSlider">                    
-                    <img src={DownArrow} className="downArrowIcon upArrow"/>
+                    <img src={DownArrow} alt="downarrow icon" className="downArrowIcon upArrow"/>
                     <div className="resourceTile">
                     </div>
                     <div className="resourceTile">
@@ -137,7 +133,7 @@ export default function InfoDashboard (props){
                     </div>
                     <div className="resourceTile">
                     </div>
-                    <img src={DownArrow} className="downArrowIcon downArrow"/>
+                    <img src={DownArrow} alt="downarrow icon" className="downArrowIcon downArrow"/>
                 </div>
 
             </div>

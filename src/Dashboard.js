@@ -33,7 +33,7 @@ export default function Dashboard (props){
 
                 <div id="dashheader">
                     <div id="dashtitle">
-                        <img src={props.chain.logoTypeface} className="ProjectDashboardLogo"/>
+                        <img src={props.chain.logoTypeface} alt="typeface logo" className="ProjectDashboardLogo"/>
                     </div>
 
                     <ul id="dashnav">

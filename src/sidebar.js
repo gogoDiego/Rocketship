@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import "./sidebar.css"
 
@@ -21,11 +21,13 @@ export default function Sidebar (props){
         <img
             src={HomeIcon}
             className="homeIcon"
+            alt="home icon"
         />
 
         <img
             src={StrategyIcon}
             className="StrategyIcon"
+            alt="Strategy icon"
         />
 
         <hr className="sidebarHr"/>
@@ -33,11 +35,13 @@ export default function Sidebar (props){
         <img
             src={osmologo}
             className="sidebarApp"
+            alt="project app icon"
         />
 
         <img
             src={CosmosATOMLogo}
             className="sidebarApp"
+            alt="project app icon"
         />
 
         </div>

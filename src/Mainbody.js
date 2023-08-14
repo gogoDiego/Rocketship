@@ -6,8 +6,8 @@ import Header from "./Header";
 import Dashboard from "./Dashboard.js"
 
 
-import DisplayApps from "./displayApps.js"
-import DisplayRows from './displayRows.js'
+// import DisplayApps from "./displayApps.js"
+// import DisplayRows from './displayRows.js'
 import DisplayArticles from "./displayArticles.js"
 
 import Sidebar from "./sidebar.js"
