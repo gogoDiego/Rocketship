@@ -48,14 +48,13 @@ export default function OverviewDash (props){
     //     fetchData();
     //   }, [props.props.chain, main]);
 
-      useEffect(() => {
+    useEffect(() => {
         async function fetchData() {
-            const data = await main();
-            setChartData(data);
+          const data = await main();
+          setChartData(data);
         }
-      
         fetchData();
-      }, [props.props.chain]);
+      }, [props.props.chain, main]);
       
 
       
