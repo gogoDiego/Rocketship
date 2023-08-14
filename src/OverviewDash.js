@@ -23,7 +23,8 @@ export default function OverviewDash (props){
     const [chartTime, setChartTime] = useState("D");
 
 
-    const fetchAssetPriceData = useCallback(async (coingeckoAPILink) => {
+
+    async function fetchAssetPriceData(coingeckoAPILink) {
         const apiUrl = coingeckoAPILink;
         const response = await fetch(apiUrl);
         const data = await response.json();
@@ -31,23 +32,22 @@ export default function OverviewDash (props){
           time: new Date(price[0]).toISOString().slice(0, 10),
           value: price[1],
         }));
-        return prices.slice(0, -1);
-      }, []);
-    
+        return prices.slice(0, -1); 
+      }
       
-      const main = useCallback(async () => {
+      async function main() {
         const assetPriceData = await fetchAssetPriceData(props.props.chain.apiPriceLink);
         return assetPriceData;
-      }, [fetchAssetPriceData]);
+      }
 
 
-      useEffect(() => {
+    useEffect(() => {
         async function fetchData() {
           const data = await main();
           setChartData(data);
         }
         fetchData();
-      }, [props.props.chain, main]);
+      }, [main]);
       
 
       
