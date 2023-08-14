@@ -1,0 +1,921 @@
+
+
+
+:root{
+  
+    /* --dashboardOutline: #756b95;
+    --dashboardFontColor: white;
+    --dashboardBackground: #2d2755;
+    --dashSelectedNavUnderline: #756b95;
+    --dashContentOutline: #756b95;
+    --dashContentBackground: #3c356c;
+  
+    --DashboardSubtitleTextColor: #FFF;
+    --DashboardEstTextColor: rgba(255, 255, 255, 0.253);
+
+    --DashboardTagTextColor: #FFF;
+    --DashboardTagBackgroundColor: #462ADF;
+    --DashboardTagOutlineColor: #756b95;
+
+
+    --DashboardTokenOverviewDividerColor: #756b95;
+    --DashboardTokenStatsNumberColor: #FFF;
+    --DashboardTokenStatsSubtitleColor: rgba(255, 255, 255, 0.753);
+    --DashboardTokenTickerColor: #fff;
+
+
+    --DashboardChartOutlineColor: #756b95;
+
+
+    --DashboardReadMoreContentTextColor: #FFF;
+    --DashboardReadMoreTextColor: #fff;
+    --DashboardReadMoreBackgroundColor: #2d2755;
+    --DashboardReadMoreDivTopBorderColor: #756b95; */
+
+
+    --dashboardOutline: #756b95;
+    --dashboardFontColor: white;
+    --dashboardBackground: #2d2755;
+    --dashSelectedNavUnderline: #756b95;
+    --dashContentOutline: #756b95;
+    --dashContentBackground: #3c356c;
+  
+    --DashboardSubtitleTextColor: #FFF;
+    --DashboardEstTextColor: rgba(255, 255, 255, 0.253);
+
+    --DashboardTagTextColor: #FFF;
+    --DashboardTagBackgroundColor: #462ADF;
+    --DashboardTagOutlineColor: #756b95;
+
+
+    --DashboardTokenOverviewDividerColor: #756b95;
+    --DashboardTokenStatsNumberColor: #FFF;
+    --DashboardTokenStatsSubtitleColor: rgba(255, 255, 255, 0.753);
+    --DashboardTokenTickerColor: #fff;
+
+
+    --DashboardChartOutlineColor: #756b95;
+
+
+    --DashboardReadMoreContentTextColor: #FFF;
+    --DashboardReadMoreTextColor: #fff;
+    --DashboardReadMoreBackgroundColor: #2d2755;
+    --DashboardReadMoreDivTopBorderColor: #756b95;
+      
+}
+
+
+
+#dashboarddiv {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100vw;
+    /* min-height: 452px; */
+    padding-top: 50px;
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+  }
+  
+
+.dashboard{
+
+  display: block;
+  position: relative;
+
+  width: 1200px;
+  height: 390px;
+  transition: height 0.5s ease;
+
+  background: var(--dashboardBackground);
+  color: var(--dashboardFontColor);
+  border: var(--dashboardOutline) solid 1px;
+  border-radius: 6px;
+  overflow: hidden;
+
+/* 
+  background-color: rgba(6, 25, 244, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+
+
+  }
+
+
+
+
+
+
+  .expanded{
+    height: 800px;
+  }
+  
+  
+  
+  
+  #dashheader{
+  
+    display: flex;
+  
+    width: 100%;
+    height: 90px;
+  
+    align-items: center;
+  
+  }
+
+
+#dashtitle {
+
+    display: block;
+    position: relative;
+  
+  
+    padding-inline: 15px;
+  
+  
+}
+  
+  .ProjectDashboardLogo{
+  
+    height: 70px;
+    padding-left: 6px;
+    
+}
+
+#dashnav{
+
+    display: inline-flex;
+  
+    padding-top: 25px;
+    padding-left: 25px;    
+    list-style: none;
+    font-family: sans-serif;
+  
+  
+}
+
+
+
+.selectedDashNav {
+
+    border-bottom: 3px var(--dashSelectedNavUnderline) solid;
+    
+  
+}
+  
+.unselectedDashNav {
+  
+    opacity: .65;
+}
+  
+  
+  #dashnav > li {
+  
+    padding-inline: 30px;
+    font-size: 1.65rem;
+  
+  }
+
+
+
+
+#dashcontent {
+
+  display: block;
+  position: relative;
+  
+
+}
+  
+.dashContentDiv {
+
+  display: flex;
+  position: relative;
+
+  /* height: calc(100% - 95px); */
+  height: 100%;
+  width: 100%;  
+
+  outline: solid 1px var(--dashContentOutline);
+  background: var(--dashContentBackground);
+
+  /* border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px; */
+
+  margin: 0px !important;
+  padding: 0px !important;
+
+  /* overflow:visible; */
+
+  overflow-y: scroll;
+
+}
+
+
+
+
+
+
+.overviewDash{
+
+  display: block;
+  position: relative;
+
+  height: 295px;
+  width: 45%;
+
+  margin-top: 6px;
+  padding-top: 6px;
+  /* overflow-y: visible; */
+  overflow: hidden;
+  /* overflow-y: inherit; */
+  /* overflow-y: unset; */
+
+  margin-right: -8px;
+
+
+
+}
+
+.overviewDash::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scroll bar */
+}
+
+.overviewDash::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the color of the scroll bar thumb */
+}
+
+.overviewDash::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the color of the scroll bar track */
+}
+
+
+
+
+.overviewSubtitle{
+
+    display: flex;
+    position: relative;
+    align-items: center;
+  
+    font-weight: 800;
+  
+    color: var(--DashboardSubtitleTextColor);
+  
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 15px;
+  
+  
+    height: 50px;
+    font-size: 30px;
+
+  
+  }
+  
+  .overviewSub{
+  
+    margin: 0px;
+    margin-right: 5px;  
+  
+  }
+
+
+
+
+
+
+
+.overviewProjectEst{
+  
+    color: var(--DashboardEstTextColor);
+    font-size: 0.8em;
+  
+    padding-left: 6px;
+
+    height: 100%;
+    line-height: 47px;
+    
+  }
+  
+  
+  
+  
+  .overviewTags{
+  
+    display: flex;
+    position: relative;
+    margin-top: 12px;
+  
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 15px;
+  
+  }
+
+
+
+
+
+.overviewTag{
+
+    display: flex;
+    position: relative;
+  
+    justify-content: center;
+    align-items: center;
+  
+    background-color: var(--DashboardTagBackgroundColor);
+    color: var(--DashboardTagTextColor);
+  
+    font-size: 16px;
+    font-weight: 600;
+  
+    height: 30px;
+  
+    outline: 1px var(--DashboardTagOutlineColor) solid;
+    border-radius: 5px;
+    
+  
+    margin-right: 14px;
+    padding-inline: 7px;
+  
+  }
+
+
+  
+
+
+.overviewDescription{
+
+    display: block;
+    position: relative;
+    font-size: 16px;
+  
+    margin-top: 12px;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 15px;
+  
+  }
+  
+
+
+
+.overviewToken{
+
+    display: block;
+    position: relative;
+  
+    width: 55%;
+  
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+  
+}
+
+
+
+
+
+.overviewStatsdiv{
+
+    display: flex;
+    position: relative;
+}
+  
+
+.overviewStats{
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: 110%;
+
+  }
+
+
+
+.TokenDivider{
+
+    margin-top: 12px;
+    border: 1px solid var(--dashboardOutline);
+    border-radius: 5px;
+  
+    
+  }
+  
+
+  
+  
+  
+  
+  .overviewChartDiv {
+  
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+  
+    margin-left: 6px;  
+  
+  }
+
+
+
+
+
+.dashboardChart {
+
+    display: flex;
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    min-height: 245px;
+  
+    border-radius: 7px;
+  
+    overflow: hidden;
+  
+    outline: 2px var(--DashboardChartOutlineColor) solid;
+  
+  }
+
+
+
+
+
+
+.overviewStatRow{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+   
+  }
+  
+.overviewTicker{
+
+  display: flex;
+  position: relative;
+
+  align-content: center;
+  justify-content: center;
+
+  font-weight: 1200;
+  font-family: phonk;
+  color: var(--DashboardTokenTickerColor);
+  height: 25px;
+  font-size: 30px;
+
+  margin-top: auto;
+
+
+}
+
+
+  
+
+.StatSubtitle{
+
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  color: var(--DashboardTokenStatsSubtitleColor);
+  
+  
+  }
+  
+  .StatNum{
+  
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    color: var(--DashboardTokenStatsNumberColor);
+  
+  }
+
+
+
+
+.overviewDivider{
+  
+    border: 1px solid var(--DashboardTokenOverviewDividerColor);
+    height:  290px;
+  
+    margin-top: 12px;
+  
+    border-radius: 5px;
+  
+  }
+
+
+
+.readmoreDiv {
+    position: relative;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  
+
+  
+    width: calc(100% - 6px);
+    height: 50px;
+    
+  
+    /* bottom: -1px; */
+  
+  
+    background-color: var(--DashboardReadMoreBackgroundColor);
+  
+    border-top: var(--DashboardReadMoreDivTopBorderColor) solid 1px;
+    border-right: var(--DashboardReadMoreDivTopBorderColor) solid 2px;
+    border-bottom: var(--DashboardReadMoreDivTopBorderColor) solid 2px;
+
+    border-bottom-left-radius: 6px;
+    
+  
+    transition: all 0.3s ease-in-out;
+  }
+
+
+
+
+
+
+
+
+.readmoreDiv1 {
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+  color: var(--DashboardReadMoreTextColor);
+}
+  
+
+
+
+
+
+.readmore {
+    margin-right: 2.5px;
+    margin-bottom: 0;
+  
+  }
+  
+  .downArrowIcon {
+    width: 20px;
+    height: 20px;
+    filter: invert();
+  }
+  
+  .flipped{
+    rotate: 180deg;
+  }
+
+  .flopped{
+    rotate: 90deg;
+  }
+
+  .flop{
+    rotate: -90deg;
+  }
+
+
+
+
+
+.overviewprojectResources{
+
+
+    display: flex;
+    position: relative;
+  
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 15px;
+    margin-top: 8px;
+  
+    font-size: 18px;
+    font-weight: 700;
+  
+  
+  
+  }
+
+
+
+.resourcesIcon{
+
+    width: 30px;
+    height: 30px;
+  
+    margin-inline: 5px;
+  
+    filter: invert();
+  
+  }
+
+
+
+
+.projectTextContent{
+
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 15px;
+    color: var(--DashboardReadMoreContentTextColor)
+  
+  }
+  
+  .projectTextContent > h3 {
+  
+    margin: 0px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  
+  }
+  
+  .projectTextContent > p {
+    text-indent: 24px;
+    font-size: 14px;
+  }
+  
+  .projectTextContent > ol{
+  
+    margin-left: 24px;
+  }
+  
+  .projectTextContent > ol > li {
+  
+    margin-top: 6px;
+  
+  }
+
+
+
+
+  .infoResourcesSlide{
+    display: block;
+    position: relative;
+    width: min-content;
+    height: 280px;
+    margin: 12px;
+    margin-left: auto; /* Push the div to the right */
+
+  }
+
+  .ResourceSlideShow{
+
+    display: flex;
+    position: relative;
+
+    width: min-content;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    border: var(--dashboardOutline) solid 2px;
+    border-radius: 6px;
+
+    overflow: hidden;
+
+  }
+
+  .Displayingslide{
+
+    display: flex;
+    position: relative;
+
+    height: 100%;
+    width: 500px;
+
+    border-right: var(--dashboardOutline) solid 2px;
+
+
+
+  }
+
+  .slideFadedescription{
+
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to bottom, transparent, #2d2755);
+    pointer-events: none; /* This makes the element non-clickable */
+
+    z-index: 2;
+
+  }
+
+
+
+  .ResourceSlideTitle{
+
+    font-size: 32px;
+    font-weight: 700;
+    font-family: phonk;
+    height: 75px;
+
+
+  }
+
+  .ResourceSlideDescription{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+
+    padding: 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+    /* font-family: phonk; */
+
+
+  }
+
+
+
+.verticalSelctionsSlider{
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 50px;
+
+
+}
+
+.resourceTile{
+
+
+  display: flex;
+  position: relative;
+
+
+  width: 35px;
+  height: 35px;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+
+  background-color: #462ADF;
+
+  border-radius: 3px;
+  border: 1px solid #756b95;
+
+
+}
+
+
+
+
+  .upArrow{
+    rotate: 180deg;
+  }
+  .downArrow{
+
+  }
+  .leftArrow{
+    rotate: 90deg;
+  }
+  .rightArrow{
+    rotate: -90deg;
+
+  }
+
+
+
+  .InfoReadingresources{
+
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: 280px;
+
+    padding: 12px;
+
+
+  }
+
+
+  .infoprojectResources{
+
+
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    float: right;
+
+    margin-left: auto; /* Push the div to the right */
+    align-items: center;
+
+    height: 50px;
+
+
+  /* outline: solid red 2px; */
+
+  
+  }
+
+  .tableandtext{
+    position: relative;
+    display: flex;
+
+    width: 100%;
+  }
+
+
+  .tableContentsBullet{
+
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0px;
+    margin: 0px !important;
+
+  }
+
+  .tableContentsBullet1{
+
+    display: flex;
+    position: relative;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    font-weight: 500;
+    padding: 0px;
+    margin: 0px !important;
+    background-color: #462ADF;
+    border: 1px solid var(--DashboardChartOutlineColor);
+    font-weight: 600;
+    margin: 0px !important;
+
+    border-radius: 3px;
+
+  }
+
+  .InfoTitle{
+    margin: 0px !important;
+    padding-inline: 6px;
+  }
+
+  .infotitleArrow{
+    border-left: white solid 2px;
+    height: 100%;
+  }
+
+
+  .infoText{
+    display: block;
+    position: absolute;
+    padding: 0px;
+    font-size: 15px;
+    align-items: center; 
+    justify-content: center;
+
+    padding-right: 12px;
+    padding-top: 18px;
+
+    /* bottom: 2.5px; */
+  }
+
+
+
+  .selectedArticle{
+    background-color: #462ADF;
+    font-weight: 600;
+    padding-inline: 5px;
+    margin: 0px !important;
+
+    border-radius: 3px;
+  }
+

@@ -1,0 +1,477 @@
+*{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+
+
+
+@font-face {
+  font-family: "Phonk";
+  src: url(/src/fonts/phonkfontreg.otf);
+  }
+
+:root{
+
+  /* transition: background 1s ease, color 1s ease; */
+
+  /* Header */
+  /* --backgroundHeader: linear-gradient(90deg,#fe3434,#ff7728); */
+  /* --backgroundHeader: linear-gradient(90deg,#eb5d47,#a933b2); */
+
+  /* --backgroundHeader: #2d2755; */
+
+
+  /* --HeaderOutline: #a4f9ff; */
+
+  /* Rocketship Logo & typeface */
+  /* --RocketshipRocket: white; */
+  /* --RocketshipTypeface:  white; */
+
+  /* top nav buttons */
+  /* --navbtn: white; */
+  /* --navbtnOutline: white; */
+  /* --navbtnborderbottom: white; */
+  /* --navbtnbackground: black; */
+
+  /* Search Bar */
+  /* --searchbarBackground: black; */
+  /* --searchInputFontColor: white; */
+  /* --searchInputBackground: black; */
+  /* --searchIcon: white; */
+
+  /* Menu */
+  /* --menuIcon: white; */
+
+  /* Main body */
+  /* --mainbodyBackground : #170f34; */
+
+
+ }
+
+
+
+
+
+
+#Header {
+
+  display: inline-flex;
+  position: sticky;
+
+  width: 100%;
+  height: 50px;
+
+  justify-content: center;
+
+  background: var(--backgroundHeader);
+  outline: 3px solid var(--HeaderOutline);
+
+
+}
+
+#headerdiv {
+
+  display: flex;
+  width: 97.5%;
+
+}
+
+
+
+
+#logodiv{
+
+  display: flex;
+  font-size: 23px;
+
+  height: inherit;
+  margin-right: auto;
+
+}
+
+.RocketshipTypeface {
+
+
+  font-family: Phonk, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+
+  color: var(--RocketshipTypeface) ;
+
+}
+
+
+#rocket {
+
+  font-size: 50px;
+
+  display: flex;
+  position: relative;
+
+  align-self: center;
+  padding-inline: 6px;
+
+  color: var(--RocketshipRocket);
+
+}
+
+
+
+
+
+
+.categorySearchDroplist{
+
+  padding-top: 2.5px !important;
+  padding-bottom: 2.5px !important;
+
+  align-self: center !important;
+  justify-content: center !important;
+
+
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  font-family: phonk !important;
+
+
+  width: fit-content !important;
+
+  background: var(--navbtnbackground) !important;
+  color: var(--navbtn) !important;
+
+
+  outline: 2px solid var(--navbtnOutline) !important;
+
+  z-index: 2 !important;
+
+    height: 30px !important;
+
+}
+
+.categorySearchDroplist > div {
+
+  padding: 0px !important;
+  /* height: 30px !important; */
+  
+position: 0px !important;
+
+  background: var(--navbtnbackground) !important;
+  z-index: 2 !important;
+
+}
+
+.categorySearchDroplist > input {
+
+height: 30px !important;
+padding: 0px !important;
+
+
+}
+
+.categorySearchDroplist > div > div {
+
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  color: white !important;
+  z-index: 2 !important;
+}
+
+.dropdown.icon {
+  /* display: none; */
+
+  height: 30px !important;
+
+
+}
+
+
+.searchbtns {
+
+  display: flex;
+  position: relative;
+
+
+  justify-content: right;
+  align-items: center;
+  margin-left: auto;
+
+  /* width: 100vw; */
+  height: 50px;
+  /* margin-left: auto;
+  margin-right: auto; */
+
+
+
+}
+
+
+.searchbtns > div {
+
+  padding-inline: 15px;
+
+}
+
+
+
+.currentSearchBtn {
+
+  display: block;
+  position: relative;
+  
+  padding: 5px;
+  /* margin-inline: 15px; */
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: phonk;
+
+  background: var(--navbtnbackground);
+  color: var(--navbtn);
+  border: 2px solid var(--navbtnOutline);
+  border-bottom: 1px solid var(--navbtnborderbottom);
+
+  border-radius: 3px;
+
+  list-style: none;
+  text-align: left;
+
+
+}
+
+.searchbutton{
+
+  list-style: none;
+  position:absolute;
+
+  top: 50px;
+
+  border: 2px solid var(--navbtnOutline);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+
+}
+
+.showButton{
+
+  display: block;
+  position: relative;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: phonk;
+
+  padding-inline: 5px;
+
+  background: var(--navbtnbackground);
+  color: var(--navbtn);
+  border-bottom: 1px solid var(--navbtnborderbottom);
+
+  list-style: none;
+  text-align: left;
+  
+}
+
+
+.unselectedSearchButton{
+
+  display: none;
+}
+
+
+
+/* .searchbutton{
+
+position: relative;
+
+padding: 5px;
+margin-inline: 15px;
+
+font-size: 1.25rem;
+font-weight: 700;
+font-family: phonk;
+
+background: var(--navbtnbackground);
+color: var(--navbtn);
+outline: 2px solid var(--navbtnOutline);
+border-bottom: 1px solid var(--navbtnborderbottom);
+
+border-radius: 3px;
+
+list-style: none;
+text-align: left;
+
+} */
+
+
+
+
+
+#searchbar{
+
+  width: fit-content;
+  height: fit-content;
+
+  padding: 2.5px;
+  margin-inline: 15px;
+
+
+  font-family: Phonk;
+
+  background: var(--searchbarBackground);
+
+  border-radius: 3px;
+
+  display: flex;
+  position: relative;
+  
+  width:fit-content;
+  height: fit-content;
+
+  padding-inline: 5px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  margin-inline: 15px;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: phonk;
+
+  background: var(--navbtnbackground);
+  color: var(--navbtn);
+  outline: 2px solid var(--navbtnOutline);
+  border-bottom: 1px solid var(--navbtnborderbottom);
+
+  border-radius: 3px;
+
+  align-content: center;
+  justify-content: center;
+
+}
+
+#searchinput{
+
+  font-family: phonk;
+  width: 175px;
+  font-size: 1.25rem;
+  padding-inline: 2.5px;
+  outline: transparent;
+
+  color: var(--searchInputFontColor);
+  background: var(--searchInputBackground);
+
+  border: transparent;
+
+
+}
+
+
+
+#searchicon{
+
+  color: var(--searchIcon) ;
+  font-size: 30px;
+  font-weight: 700;
+
+}
+
+
+#walletdiv{
+
+  display: flex;
+  position: relative;
+
+  height: inherit;
+
+}
+
+#menuicon{
+
+  font-size: 50px;
+
+  line-height: 50px;
+
+  display: flex;
+  position: relative;
+
+  align-self: center;
+  padding-inline: 6px;
+
+  color: var(--menuIcon);
+
+}
+
+
+
+#mainbody {
+
+  background: var(--mainbodyBackground);
+  height: calc(100vh)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
