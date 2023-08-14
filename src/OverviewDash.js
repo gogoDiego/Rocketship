@@ -40,13 +40,25 @@ export default function OverviewDash (props){
         return assetPriceData;
       }
       
+    //   useEffect(() => {
+    //     async function fetchData() {
+    //       const data = await main();
+    //       setChartData(data);
+    //     }
+    //     fetchData();
+    //   }, [props.props.chain, main]);
+
       useEffect(() => {
         async function fetchData() {
-          const data = await main();
-          setChartData(data);
+            const data = await main();
+            setChartData(data);
         }
+      
         fetchData();
-      }, [props.props.chain, main]);
+      }, [props.props.chain]);
+      
+
+      
       
 
 

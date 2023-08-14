@@ -18,7 +18,7 @@ export default function DisplayArticles (props){
     <div className='article'>
 
         <div className="articleImgDiv">
-            <img src={props.chain.coverPhoto} alt="Article photo" className='articleImage' alt='coverphoto'/>
+            <img src={props.chain.coverPhoto} className='articleImage' alt='coverphoto'/>
         </div>
 
         <div className='articleContents'>
