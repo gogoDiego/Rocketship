@@ -28,6 +28,8 @@
     grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
     grid-gap: 24px;
 
+    justify-content: center;
+    align-items: center;
     /* width: 70vw; */
     width: 1200px;
 

@@ -8,6 +8,8 @@ import Dashboard from "./Dashboard.js"
 
 // import DisplayApps from "./displayApps.js"
 // import DisplayRows from './displayRows.js'
+import "./rows.css"
+
 import DisplayArticles from "./displayArticles.js"
 
 import Sidebar from "./sidebar.js"
